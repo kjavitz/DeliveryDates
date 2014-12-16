@@ -5,8 +5,10 @@ class ITwebexperts_Deliverydates_Model_Source_Deliveryzone extends Mage_Eav_Mode
     {
         $zones = Mage::getModel('deliverydates/deliveryzones')->getCollection();
         $optionsarray = array(
+            array(
             'value' =>  '',
-            'label' =>  ''
+            'label' =>  Mage::helper('payperrentals')->__('-- Please Select --')
+            )
         );
         foreach($zones as $zone){
             $optionsarray[] = array(

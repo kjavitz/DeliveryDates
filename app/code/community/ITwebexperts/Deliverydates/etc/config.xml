@@ -2,9 +2,29 @@
 <config>
     <modules>
         <ITwebexperts_Deliverydates>
-            <version>0.1</version>
+            <version>0.1.0</version>
         </ITwebexperts_Deliverydates>
     </modules>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <itwebexperts_deliverydates before="Mage_Adminhtml">ITwebexperts_Deliverydates_Adminhtml</itwebexperts_deliverydates>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <itwebexperts_deliverydates>
+                    <file>deliverydates.xml</file>
+                </itwebexperts_deliverydates>
+            </updates>
+        </layout>
+    </adminhtml>
     <frontend>
         <layout>
             <updates>

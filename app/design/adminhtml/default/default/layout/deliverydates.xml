@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+        <layout>
+    <adminhtml_deliveryzones_index>
+        <reference name="content">
+            <block type="deliverydates/adminhtml_deliveryzone" name="deliveryzone"/>
+        </reference>
+    </adminhtml_deliveryzones_index>
+    <adminhtml_deliveryzones_edit>
+        <reference name="content">
+            <block type="deliverydates/adminhtml_deliveryzones_edit" name="delivery_edit"/>
+        </reference>
+    </adminhtml_deliveryzones_edit>
+        </layout>

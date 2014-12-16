@@ -1,4 +1,18 @@
 <?xml version="1.0"?>
 <config>
-    <menu></menu>
+    <menu>
+        <payperrentals>
+            <children>
+                <rentalqueue>
+                    <children>
+                        <deliveryzones module="deliverydates">
+                            <title>Delivery Zones</title>
+                            <sort_order>10</sort_order>
+                            <action>adminhtml/deliveryzones</action>
+                        </deliveryzones>
+                    </children>
+                </rentalqueue>
+            </children>
+        </payperrentals>
+    </menu>
 </config>
