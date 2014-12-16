@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <payperrentals>
+            <groups>
+                <rental>
+                    <fields>
+                        <enable_deliverydates translate="label tooltip">
+                            <label><![CDATA[Enable Delivery Date Selection]]></label>
+                            <tooltip><![CDATA[Shows a delivery date selector on the rental queue page]]></tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_deliverydates>
+                        <deliverydates_min translate="label tooltip">
+                            <label><![CDATA[Minimum products in queue to show delivery date selector]]></label>
+                            <sort_order>40</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </deliverydates_min>
+                    </fields>
+                </rental>
+            </groups>
+        </payperrentals>
+    </sections>
+</config>

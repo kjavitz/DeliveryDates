@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+        <layout version="0.1.0">
+    <payperrentals_front_customer_rentalqueue_index>
+        <reference name="payperrentals_customer_rentalqueuelist">
+            <block type="deliverydates/customer_rentalqueue_calendar" template="deliverydates/customer/rentalqueue/calendar.phtml" name="calendar" as="calendar"/>
+        </reference>
+    </payperrentals_front_customer_rentalqueue_index>
+        </layout>

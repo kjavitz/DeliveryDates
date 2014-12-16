@@ -1,0 +1,21 @@
+<?php if($this->enabled) : ?>
+<br />
+<div class="content-header">
+    <table cellspacing="0" class="grid-header">
+        <tr>
+            <td><h3><?php echo $this->__('Delivery Date')?></h3>
+            <?php echo $this->getCalendar(); ?>
+                <?php if($this->oktoshow): ?>
+        <input id="calendarpick" readonly="true">
+                    <script>
+                        $jppr('#calendarpick').datepicker({
+                            minDate: '+1D',
+                            maxDate: '+1M'
+                        });
+                    </script>
+        <?php endif ?>
+            </td>
+        </tr>
+    </table>
+</div>
+<?php endif ?>
