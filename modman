@@ -4,3 +4,4 @@ app/design/frontend/base/default/layout/deliverydates.xml app/design/frontend/ba
 app/design/frontend/base/default/template/deliverydates app/design/frontend/base/default/template/deliverydates
 app/design/adminhtml/default/default/layout/deliverydates.xml app/design/adminhtml/default/default/layout/deliverydates.xml
 app/design/adminhtml/default/default/template/deliverydates app/design/adminhtml/default/default/template/deliverydates
+js/deliverydates js/deliverydates

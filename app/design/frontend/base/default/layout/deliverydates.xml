@@ -1,8 +1,16 @@
 <?xml version="1.0"?>
         <layout version="0.1.0">
     <payperrentals_front_customer_rentalqueue_index>
+        <reference name="head">
+            <action method="addJs">
+                <script>deliverydates/jquery.noty.packaged.js</script>
+            </action>
+        </reference>
         <reference name="payperrentals_customer_rentalqueuelist">
             <block type="deliverydates/customer_rentalqueue_calendar" template="deliverydates/customer/rentalqueue/calendar.phtml" name="calendar" as="calendar"/>
+            <block type="cms/block" name="delivery_dates_text" as="delivery_dates_text">
+                <action method="setBlockId"><block_id>delivery_dates_text</block_id></action>
+            </block>
         </reference>
     </payperrentals_front_customer_rentalqueue_index>
         </layout>

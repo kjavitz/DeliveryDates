@@ -6,7 +6,8 @@
             <td><h3><?php echo $this->__('Delivery Date')?></h3>
             <?php echo $this->getCalendar(); ?>
                 <?php if($this->oktoshow): ?>
-        <input id="calendarpick" readonly="true">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('delivery_dates_text')->toHtml(); ?>
+        <form id="dates"><input id="calendarpick" name="calendarpick" readonly="true" value="<?php echo $this->deliverydate; ?>"> <button id="Testing" class="button">Update</button><input id="customerid" name="customerid" type="hidden" value="<?php echo $this->customerid ?>"></form>
                     <script>
                         $jppr('#calendarpick').datepicker({
                             minDate: '+1D',
@@ -18,4 +19,44 @@
         </tr>
     </table>
 </div>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#Testing').click(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    dataType: 'json',
+                    type: 'post',
+                    data: $('#dates').serialize(),
+                    url: '<?php echo Mage::getUrl("deliverydates/ajax/updatedeliverydate/",array())?>',
+                    success: function (data) {
+                        if(data.response == 'success') {
+                            var n = noty({
+                                text: 'Delivery Date Updated',
+                                type: 'success',
+                                layout: 'center',
+                                timeout: 1500
+                            });
+                        }
+                        if(data.response == 'failure'){
+                            var n = noty({
+                                text: 'Delivery Date Update Failure: ' + data.message,
+                                type: 'error',
+                                layout: 'center',
+                                timeout: 1500
+                            });
+                        }
+                    }
+                });
+            });
+
+//        (function ($){
+//
+//        }(jQuery));
+//
+//        function showMessage(txt, type) {
+//            var html = '<ul class="messages"><li class="'+type+'-msg"><ul><li>' + txt + '</li></ul></li></ul>';
+//            $jppr('div .col-main').prepend(html);
+//        }
+        });
+    </script>
 <?php endif ?>

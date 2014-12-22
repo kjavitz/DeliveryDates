@@ -10,6 +10,8 @@ class ITwebexperts_Deliverydates_Block_Customer_Rentalqueue_Calendar extends Mag
         $this->enabled = Mage::getStoreConfig('payperrentals/rental/enable_deliverydates');
         $this->deliverymin = 0;// Mage::getStoreConfig('payperrentals/rental/deliverydates_min');
         $this->numberinqueue = Mage::getModel('payperrentals/rentalqueue')->getCollection()->getNumberInQueue($this->customerid);
+        $this->customer = Mage::getSingleton('customer/session')->getCustomer();
+        $this->deliverydate = date('m/d/Y',strtotime($this->customer->getDeliveryDate()));
     }
 
     public function getCalendar(){

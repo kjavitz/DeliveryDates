@@ -12,7 +12,6 @@ class ITwebexperts_Deliverydates_Block_Adminhtml_Deliveryzones_Edit_Form extends
         ));
         $form->setUseContainer(true);
         $this->setForm($form);
-        $dateFormatIso = Mage::app()->getLocale()->getDateTimeFormat(Mage_Core_Model_Locale::FORMAT_TYPE_SHORT);
 
         if (Mage::getSingleton('adminhtml/session')->getFormData())
         {
@@ -26,17 +25,17 @@ class ITwebexperts_Deliverydates_Block_Adminhtml_Deliveryzones_Edit_Form extends
         $fieldset->addField('name', 'text', array(
             'label'     =>  Mage::helper('deliverydates')->__('Zone Name'),
             'class'     =>  'required-entry',
-            'required'  =>  'true'
+            'required'  =>  'true',
+            'name'      =>  'name'
         ));
 
         $fieldset->addField('disabled_days', 'multiselect', array(
             'label'     =>  Mage::helper('maintenance')->__('Disabled Days'),
+            'name'      =>  'disabled_days',
             'class'     =>  'required-entry',
             'required'  =>  'true',
             'values'    =>  array(array('value'=>1,'label'=>'Monday'))
         ));
-
-
 
         $form->setValues($data);
         return parent::_prepareForm();

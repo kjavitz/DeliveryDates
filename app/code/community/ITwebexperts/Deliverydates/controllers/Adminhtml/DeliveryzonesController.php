@@ -40,6 +40,7 @@ class ITwebexperts_Deliverydates_Adminhtml_DeliveryzonesController extends Mage_
                 $id = $this->getRequest()->getParam('id');
                 if($data){
                     $tableItem = Mage::getModel('deliverydates/deliveryzones')->load($id);
+                    $data['disabled_days'] = implode(',',$data['disabled_days']);
                     $tableItem->setData($data);
                     if($id){
                         $tableItem->setId($id);

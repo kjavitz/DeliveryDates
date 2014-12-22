@@ -2,7 +2,7 @@
 <config>
     <modules>
         <ITwebexperts_Deliverydates>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </ITwebexperts_Deliverydates>
     </modules>
     <admin>
@@ -33,6 +33,15 @@
                 </itwebexperts_deliverydates>
             </updates>
         </layout>
+        <routers>
+            <deliverydates>
+                <use>standard</use>
+                <args>
+                    <module>ITwebexperts_Deliverydates</module>
+                    <frontName>deliverydates</frontName>
+                </args>
+            </deliverydates>
+        </routers>
     </frontend>
     <global>
         <models>

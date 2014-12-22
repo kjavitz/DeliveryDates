@@ -23,7 +23,7 @@ class ITwebexperts_Deliverydates_Block_Adminhtml_Deliveryzones_Grid extends Mage
     {
         $this->addColumn('name',array(
             'header'    =>  Mage::helper('deliverydates')->__('Zone Name'),
-            'index'     =>  'zone_id',
+            'index'     =>  'name',
             'type'      =>  'text',
         ));
 
