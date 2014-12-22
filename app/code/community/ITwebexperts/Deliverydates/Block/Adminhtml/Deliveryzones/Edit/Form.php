@@ -34,7 +34,7 @@ class ITwebexperts_Deliverydates_Block_Adminhtml_Deliveryzones_Edit_Form extends
             'name'      =>  'disabled_days',
             'class'     =>  'required-entry',
             'required'  =>  'true',
-            'values'    =>  array(array('value'=>1,'label'=>'Monday'))
+            'values'    =>  Mage::getModel('deliverydates/deliveryzones')->getDisabledDaysOptions()
         ));
 
         $form->setValues($data);

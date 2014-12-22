@@ -90,4 +90,14 @@
             </deliverydates>
         </blocks>
     </global>
+    <default>
+        <payperrentals>
+            <rental>
+                <enable_deliverydates>1</enable_deliverydates>
+                <deliverydates_min>3</deliverydates_min>
+                <daysmin>1</daysmin>
+                <daysmax>30</daysmax>
+            </rental>
+        </payperrentals>
+    </default>
 </config>

@@ -25,6 +25,26 @@
                             <show_in_store>1</show_in_store>
                             <can_be_empty>1</can_be_empty>
                         </deliverydates_min>
+                        <daysmin translate="label tooltip">
+                            <label><![CDATA[Days padding from today's date to start allowing selection of delivery date]]></label>
+                            <sort_order>50</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </daysmin>
+                        <daysmax translate="label tooltip">
+                            <label><![CDATA[Max days in the future for selection of delivery date]]></label>
+                            <sort_order>60</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </daysmax>
                     </fields>
                 </rental>
             </groups>
