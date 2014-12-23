@@ -5,7 +5,7 @@ class ITwebexperts_Deliverydates_Helper_Data extends Mage_Core_Helper_Abstract
         $customer = Mage::getSingleton('customer/session')->getCustomer();
         $deliveryzone = $customer->getDeliveryZone();
         $disableddays = Mage::getModel('deliverydates/deliveryzones')->load($deliveryzone)->getDisabledDays();
-        $disableddays = explode(',',$disableddays);
+        $disableddays = array_map('intval',explode(',',$disableddays));
         return json_encode($disableddays);
     }
 }

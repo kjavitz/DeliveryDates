@@ -10,13 +10,11 @@
         <form id="dates"><input id="calendarpick" name="calendarpick" readonly="true" value="<?php echo $this->deliverydate; ?>"> <button id="Testing" class="button">Update</button><input id="customerid" name="customerid" type="hidden" value="<?php echo $this->customerid ?>"></form>
                     <script>
                         var disabledDays = <?php echo Mage::helper('deliverydates')->getDisabledDays($this->customerid) ?>;
-                        var disabledDays = [1,2,3];
                         $jppr('#calendarpick').datepicker({
                             minDate: '+<?php echo $this->mindate ?>D',
                             maxDate: '+<?php echo $this->maxdate ?>D',
                             beforeShowDay: function(date){
                                 var day = date.getDay();
-//                                return [(day != 1 && day != 2)];
                                 if($jppr.inArray(day,disabledDays) == -1){
                                     return [true];
                                 } else {

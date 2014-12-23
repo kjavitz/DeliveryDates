@@ -532,7 +532,7 @@
 
     // Helpers
     window.noty = function noty(options) {
-        return jQuery.notyRenderer.init(options);
+        return $.notyRenderer.init(options);
     };
 $.noty.layouts.bottom = {
     name     : 'bottom',
