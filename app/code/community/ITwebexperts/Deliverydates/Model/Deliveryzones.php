@@ -14,7 +14,7 @@ class ITwebexperts_Deliverydates_Model_Deliveryzones extends Mage_Core_Model_Abs
             array('value'=>4,'label'=>Mage::helper('deliverydates')->__('Thursday')),
             array('value'=>5,'label'=>Mage::helper('deliverydates')->__('Friday')),
             array('value'=>6,'label'=>Mage::helper('deliverydates')->__('Saturday')),
-            array('value'=>7,'label'=>Mage::helper('deliverydates')->__('Sunday')),
+            array('value'=>0,'label'=>Mage::helper('deliverydates')->__('Sunday')),
         );
         return $disableddays;
     }
