@@ -16,6 +16,7 @@ class ITwebexperts_Deliverydates_Block_Customer_Rentalqueue_Calendar extends Mag
         else {$this->deliverydate = '';}
         $this->mindate = Mage::getStoreConfig('payperrentals/rental/daysmin');
         $this->maxdate = Mage::getStoreConfig('payperrentals/rental/daysmax');
+        $this->globaldisabled = Mage::helper('deliverydates')->getGlobalDisabledDates();
     }
 
     public function getCalendar(){

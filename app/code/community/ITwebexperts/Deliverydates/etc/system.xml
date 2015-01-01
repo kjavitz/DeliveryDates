@@ -45,6 +45,16 @@
                             <show_in_store>1</show_in_store>
                             <can_be_empty>1</can_be_empty>
                         </daysmax>
+                        <global_dates_excluded translate="label tooltip">
+                            <label><![CDATA[Global Dates Excluded]]></label>
+                            <frontend_model>deliverydates/adminhtml_global_dates_excluded</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <source_model>payperrentals/source_globalExclude</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </global_dates_excluded>
                     </fields>
                 </rental>
             </groups>

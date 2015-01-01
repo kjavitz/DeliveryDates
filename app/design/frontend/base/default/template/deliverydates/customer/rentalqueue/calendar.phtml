@@ -15,11 +15,13 @@
                             maxDate: '+<?php echo $this->maxdate ?>D',
                             beforeShowDay: function(date){
                                 var day = date.getDay();
-                                if($jppr.inArray(day,disabledDays) == -1){
-                                    return [true];
-                                } else {
+                                var disabledDates = <?php echo $this->globaldisabled ?>
+
+                                if($jppr.inArray(day,disabledDays) != -1){
                                     return [false];
                                 }
+                                var string = $jppr.datepicker.formatDate('yy-mm-dd',date);
+                                return [$jppr.inArray(string,disabledDates) == -1]
                             }
                         });
                     </script>
